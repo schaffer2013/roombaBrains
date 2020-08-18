@@ -5,7 +5,7 @@ import threading
 from time import sleep
 from SensorFrame import SensorFrame
 
-
+#test header for git
 
 def initialize():
     if (ser.open):
