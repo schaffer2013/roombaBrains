@@ -10,9 +10,14 @@ from SensorFrame import SensorFrame
 def initialize():
     if (ser.open):
         print('Connected')
+        reset()
+        sleep(7)
         start()
         safeMode()
-        ser.reset_input_buffer()
+        
+        a=read(.5)
+        while(a!=b''):
+            a=read(.5)
     else:
         print('Connection Failed')         
 
@@ -200,10 +205,18 @@ def getSensor(packetID):
             val=sensorDataInterpreter[packetID](ch[0],ch[1])
         else:
             val=112233
-        if packetID==api.OI_MODE:
-            print(modeStr(val))
-        else:
-            print(val)
+            return val
+
+        if packetID==api.BUMPS_AND_WHEEL_DROPS: # 7 BUMPS_AND_WHEEL_DROPS
+            sf.casterDrop=val[0]
+            sf.leftWheelDrop=val[1]
+            sf.rightWheelDrop=val[2]
+            sf.leftBump=val[3]
+            sf.rightBump=val[4]
+        elif packetID==api.WALL_IR_SENSOR: #8
+            sf.wallSensor=val
+
+        
         return val
     elif packetID>-1:
         group=range(7,8) 
