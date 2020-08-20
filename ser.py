@@ -215,6 +215,38 @@ def getSensor(packetID):
             sf.rightBump=val[4]
         elif packetID==api.WALL_IR_SENSOR: #8
             sf.wallSensor=val
+        elif packetID==api.CLIFF_LEFT: #9
+        elif packetID==api.CLIFF_FRONT_LEFT: #10
+        elif packetID==api.CLIFF_FRONT_RIGHT: #11
+        elif packetID==api.CLIFF_RIGHT: #12
+        elif packetID==api.VIRTUAL_WALL: #13
+        elif packetID==api.LSD_AND_OVERCURRENTS: #14
+        elif packetID==api.INFRARED_BYTE: #17
+        elif packetID==api.BUTTONS: #18
+        elif packetID==api.DISTANCE: #19
+        elif packetID==api.ANGLE: #20
+        elif packetID==api.CHARGING_STATE: #21
+        elif packetID==api.VOLTAGE: #22
+        elif packetID==api.CURRENT: #23
+        elif packetID==api.BATTERY_TEMP: #24
+        elif packetID==api.BATTERY_CHARGE: #25
+        elif packetID==api.BATTERY_CAPACITY: #26
+        elif packetID==api.WALL_SIGNAL: #27
+        elif packetID==api.CLIFF_LEFT_SIGNAL: #28
+        elif packetID==api.CLIFF_FRONT_LEFT_SIGNAL: #29
+        elif packetID==api.CLIFF_FRONT_RIGHT_SIGNAL: #30
+        elif packetID==api.CLIFF_RIGHT_SIGNAL: #31
+        elif packetID==api.CARGO_BAY_DIGITAL_INPUTS: #32
+        elif packetID==api.CARGO_BAY_ANALOG_SIGNAL: #33
+        elif packetID==api.CHARGING_SOURCES_AVAILABLE: #34
+        elif packetID==api.OI_MODE: #35
+        elif packetID==api.SONG_NUMBER: #36
+        elif packetID==api.SONG_PLAYING: #37
+        elif packetID==api.NUM_STREAM_PACKETS: #38
+        elif packetID==api.REQUESTED_VELOCITY: #39
+        elif packetID==api.REQUESTED_RADIUS: #40
+        elif packetID==api.REQUESTED_RIGHT_VELOCITY: #41
+        elif packetID==api.REQUESTED_LEFT_VELOCITY: #42
 
         
         return val
